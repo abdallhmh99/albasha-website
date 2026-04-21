@@ -5,7 +5,7 @@ import Products from './pages/Products';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Services from './pages/Services';
-import Portfolio from './pages/Protfolio';
+import Portfolio from './pages/Portfolio';
 
  const router = createBrowserRouter([{
     path: '/',
@@ -32,7 +32,7 @@ import Portfolio from './pages/Protfolio';
             element: <Services/>
         },
         {
-            path: '/protfolio',
+            path: '/portfolio',
             element: <Portfolio/>
         }
     ]
