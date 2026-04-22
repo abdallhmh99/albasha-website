@@ -1,0 +1,14 @@
+.card {
+    background-color: #ffffff;
+    border-radius: 16px; /* Slightly larger border-radius for modern sleek look */
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(226, 232, 240, 0.8); /* Slate 200 */
+    transition: all 0.3s ease;
+}
+
+.hoverable:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+    border-color: rgba(29, 78, 216, 0.2);
+}
