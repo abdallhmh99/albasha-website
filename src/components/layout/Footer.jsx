@@ -6,7 +6,7 @@ export default function Footer() {
         <footer className={styles.footer} dir="rtl">
             <div className={styles.container}>
                 <div className={styles.grid}>
-                    {/* Brand Column */}
+
                     <div className={styles.brandCol}>
                         <div className={styles.logoWrap}>
                             <img src="/images/albasha_icon_white_only.png" alt="Albasha Logo" className={styles.logo} />
