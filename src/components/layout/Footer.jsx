@@ -9,7 +9,7 @@ export default function Footer() {
 
                     <div className={styles.brandCol}>
                         <div className={styles.logoWrap}>
-                            <img src="/images/albasha_icon_white_only.png" alt="Albasha Logo" className={styles.logo} />
+                            <img src="/images/bplast_icon_white_no_text.png" alt="Albasha Logo" className={styles.logo} />
                             <span className={styles.brandName}>الباشا</span>
                         </div>
                         <p className={styles.brandDesc}>

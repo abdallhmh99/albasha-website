@@ -102,12 +102,12 @@ function Navbar(){
                 <span className={styles.logoSwap} aria-hidden>
                     <img
                         className={`${styles.logoImg} ${styles.logoImgWhite} ${scrolled ? styles.logoHidden : ''}`}
-                        src="/images/albasha_icon_white_only.png"
+                        src="/images/bplast_icon_white_no_text.png"
                         alt=""
                     />
                     <img
                         className={`${styles.logoImg} ${styles.logoImgDark} ${scrolled ? styles.logoVisible : ''}`}
-                        src="/images/albasha_icon_only.png"
+                        src="/images/bplast_icon_only.png"
                         alt=""
                     />
                 </span>
