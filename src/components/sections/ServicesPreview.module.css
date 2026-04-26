@@ -1,0 +1,180 @@
+.servicesSection {
+    padding: 3rem 0;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Services Grid - Image Cards */
+.servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 5rem;
+}
+
+.imageCard {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.imageCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.cardImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.imageCard:hover .cardImage {
+    transform: scale(1.08);
+}
+
+.cardOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Gradient: transparent top to very dark blue bottom */
+    background: linear-gradient(to bottom, rgba(15, 23, 42, 0) 20%, rgba(15, 23, 42, 0.5) 60%, rgba(15, 23, 42, 0.95) 100%);
+    z-index: 1;
+}
+
+.cardContent {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: right;
+}
+
+.iconWrapper {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #ffffff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.imageCard:hover .iconWrapper {
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+.serviceTitle {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.serviceDesc {
+    font-size: 0.95rem;
+    color: #e2e8f0;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* Stats Section */
+.statsContainer {
+    background-color: #f8fafc;
+    border-radius: 24px;
+    padding: 4rem 2rem;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    text-align: center;
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.statValue {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #1d4ed8;
+}
+
+.statLabel {
+    font-size: 1.1rem;
+    color: #475569;
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .servicesGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .statsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .servicesSection {
+        padding: 2rem 0;
+    }
+
+    .servicesGrid {
+        grid-template-columns: 1fr;
+    }
+    
+    .imageCard {
+        height: 380px;
+    }
+    
+    .statsGrid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .statValue {
+        font-size: 2.5rem;
+    }
+}
