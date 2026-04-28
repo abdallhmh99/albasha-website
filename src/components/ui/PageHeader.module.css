@@ -1,0 +1,121 @@
+.header {
+    position: relative;
+    padding: 10rem 0 5rem; /* Increased top padding to clear the fixed navbar */
+    overflow: hidden;
+    background-color: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0 0 1rem 0;
+}
+
+.subtitle {
+    font-size: 1.15rem;
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Option 4: Gradient with Huge Icon */
+.icon {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.bgIcon {
+    position: absolute;
+    right: -5%; /* Off-center to the right (RTL left) */
+    top: -30%;
+    width: 600px;
+    height: 600px;
+    color: #1d4ed8;
+    opacity: 0.04; /* Extremely faint */
+    transform: rotate(-15deg);
+    z-index: 1;
+}
+
+/* Option 2: Blueprint / Grid Pattern */
+.blueprint {
+    background-color: #f8fafc;
+    /* CSS Grid background to look like an engineering blueprint */
+    background-image: 
+        linear-gradient(rgba(29, 78, 216, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(29, 78, 216, 0.08) 1px, transparent 1px),
+        linear-gradient(rgba(29, 78, 216, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(29, 78, 216, 0.03) 1px, transparent 1px);
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
+
+/* Option 5: Isometric Cubes (from user's 4.txt) */
+.isometric {
+    position: relative;
+    background-color: #f8fafc;
+}
+
+.isometric::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.6; /* Soften the pattern */
+    --s: 84px;
+    --c1: #f1f5f9; /* Slate 100 */
+    --c2: #e2e8f0; /* Slate 200 */
+    --c3: #f8fafc; /* Slate 50 */
+    --_g: 0 120deg, #0000 0;
+    background: conic-gradient(
+        from 0deg at calc(500% / 6) calc(100% / 3),
+        var(--c3) var(--_g)
+      ),
+      conic-gradient(
+        from -120deg at calc(100% / 6) calc(100% / 3),
+        var(--c2) var(--_g)
+      ),
+      conic-gradient(
+        from 120deg at calc(100% / 3) calc(500% / 6),
+        var(--c1) var(--_g)
+      ),
+      conic-gradient(
+        from 120deg at calc(200% / 3) calc(500% / 6),
+        var(--c1) var(--_g)
+      ),
+      conic-gradient(
+        from -180deg at calc(100% / 3) 50%,
+        var(--c2) 60deg,
+        var(--c1) var(--_g)
+      ),
+      conic-gradient(
+        from 60deg at calc(200% / 3) 50%,
+        var(--c1) 60deg,
+        var(--c3) var(--_g)
+      ),
+      conic-gradient(
+        from -60deg at 50% calc(100% / 3),
+        var(--c1) 120deg,
+        var(--c2) 0 240deg,
+        var(--c3) 0
+      );
+    background-size: calc(var(--s) * 1.732) var(--s);
+    z-index: 0;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 4rem 0;
+    }
+    .title {
+        font-size: 2.25rem;
+    }
+}

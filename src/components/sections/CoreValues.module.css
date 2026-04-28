@@ -1,0 +1,74 @@
+.valuesSection {
+    padding: 6rem 0;
+    background-color: #f8fafc;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.sectionTitle {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.valueCard {
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 3rem 2rem;
+    text-align: right;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.valueCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+.iconWrapper {
+    width: 64px;
+    height: 64px;
+    background-color: #eff6ff;
+    color: #1d4ed8;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-size: 1.05rem;
+    color: #64748b;
+    line-height: 1.7;
+    margin: 0;
+}
+
+@media (max-width: 992px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
