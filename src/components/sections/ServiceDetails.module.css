@@ -1,0 +1,102 @@
+.servicesSection {
+    padding: 6rem 0;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+}
+
+.serviceRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.serviceRow.reverse {
+    direction: ltr;
+}
+
+.serviceRow.reverse .textContent,
+.serviceRow.reverse .imageContent {
+    direction: rtl;
+}
+
+.textContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+}
+
+.description {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #475569;
+    margin: 0;
+}
+
+.featuresList {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.featureItem {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.checkIcon {
+    color: #1d4ed8;
+    flex-shrink: 0;
+}
+
+.imageContent {
+    position: relative;
+}
+
+.imageWrapper {
+    border-radius: 24px;
+    overflow: hidden;
+    background-color: #f8fafc;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 992px) {
+    .serviceRow, .serviceRow.reverse {
+        grid-template-columns: 1fr;
+        direction: rtl;
+        gap: 3rem;
+    }
+    
+    .container {
+        gap: 5rem;
+    }
+}
