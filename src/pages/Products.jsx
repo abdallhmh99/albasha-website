@@ -1,8 +1,11 @@
+import ProductsCatalog from '../components/sections/ProductsCatalog';
+import CTASection from '../components/sections/CTASection';
+
 export default function Products() {
     return (
-        <div>
-            <h1>Our Products</h1>
-            <p>Check out our amazing products</p>
+        <div dir="rtl">
+            <ProductsCatalog />
+            <CTASection />
         </div>
     );
 }
