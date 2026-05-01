@@ -1,5 +1,5 @@
 .servicesSection {
-    padding: 6rem 0;
+    padding: 10rem 0 6rem;
     background-color: #ffffff;
 }
 
@@ -7,6 +7,12 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.servicesGrid {
     display: flex;
     flex-direction: column;
     gap: 8rem;

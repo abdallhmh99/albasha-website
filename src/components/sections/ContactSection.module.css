@@ -1,0 +1,156 @@
+.contactSection {
+    padding: 10rem 0 6rem;
+    background-color: #f8fafc;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.infoSide {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+}
+
+.description {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #64748b;
+    margin: 0 0 2rem 0;
+}
+
+.infoCards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.infoCard {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s ease;
+}
+
+.infoCard:hover {
+    transform: translateY(-3px);
+}
+
+.iconWrapper {
+    width: 48px;
+    height: 48px;
+    background-color: #eff6ff;
+    color: #1d4ed8;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.infoContent h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    color: #0f172a;
+}
+
+.infoContent p {
+    margin: 0;
+    color: #64748b;
+    font-size: 1rem;
+}
+
+.whatsappSide {
+    display: flex;
+    height: 100%;
+}
+
+.whatsappCard {
+    background: linear-gradient(135deg, #128C7E 0%, #075E54 100%);
+    padding: 4rem 3rem;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(18, 140, 126, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+.whatsappIconLarge {
+    width: 96px;
+    height: 96px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.whatsappTitle {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0 0 1rem 0;
+}
+
+.whatsappDesc {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0 0 2.5rem 0;
+}
+
+.whatsappButton {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: #ffffff;
+    color: #075E54;
+    padding: 1rem 2.5rem;
+    border-radius: 999px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.whatsappButton:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 992px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .whatsappCard {
+        padding: 3rem 2rem;
+    }
+}

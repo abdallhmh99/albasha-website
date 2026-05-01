@@ -1,4 +1,5 @@
 import styles from './ServiceDetails.module.css';
+import SectionTitle from '../ui/SectionTitle';
 
 const servicesList = [
     {
@@ -39,6 +40,11 @@ export default function ServiceDetails() {
     return (
         <section className={styles.servicesSection}>
             <div className={styles.container}>
+                <SectionTitle 
+                    badge="خدماتنا" 
+                    title="حلول صناعية متكاملة من التصميم إلى الإنتاج" 
+                />
+                <div className={styles.servicesGrid}>
                 {servicesList.map((service) => (
                     <div key={service.id} className={`${styles.serviceRow} ${service.reverse ? styles.reverse : ''}`}>
                         <div className={styles.textContent}>
@@ -62,6 +68,7 @@ export default function ServiceDetails() {
                         </div>
                     </div>
                 ))}
+                </div>
             </div>
         </section>
     );
