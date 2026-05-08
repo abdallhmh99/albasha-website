@@ -16,8 +16,8 @@ export default function HeroSection() {
                         مصنع متكامل لإنتاج القوالب، خدمات CNC الاحترافية، وتصنيع أنابيب PPR بأعلى معايير الجودة العالمية.
                     </p>
                     <div className={styles.btnGroup}>
-                        <Button variant="primary" size="lg">ابدأ مشروعك الآن</Button>
-                        <Button variant="outline" size="lg">كتالوج المنتجات</Button>
+                        <Button variant="primary" size="lg" to="/contact">تواصل معنا الآن</Button>
+                        <Button variant="outline" size="lg" to="/products">كتالوج المنتجات</Button>
                     </div>
                 </div>
 

@@ -36,8 +36,8 @@ export default function PortfolioPreview() {
                         title="أحدث مشاريعنا وإنجازاتنا"
                         centered={false}
                     />
-                    <div className={styles.headerAction}>
-                        <Button variant="outline">عرض كل الأعمال</Button>
+                    <div className={styles.ctaWrapper}>
+                        <Button variant="outline" to="/portfolio">عرض كل الأعمال</Button>
                     </div>
                 </div>
 

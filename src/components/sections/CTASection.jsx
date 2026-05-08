@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './CTASection.module.css';
 
 export default function CTASection() {
@@ -14,8 +15,8 @@ export default function CTASection() {
                         فريقنا من المهندسين والخبراء جاهز لدراسة مشروعك وتقديم أفضل الحلول الصناعية من التصميم الدقيق وحتى الإنتاج الشامل.
                     </p>
                     <div className={styles.btnGroup}>
-                        <button className={`${styles.btn} ${styles.btnSolid}`}>تواصل معنا الآن</button>
-                        <button className={`${styles.btn} ${styles.btnOutline}`}>طلب عرض سعر</button>
+                        <Link to="/contact" className={`${styles.btn} ${styles.btnSolid}`}>تواصل معنا الآن</Link>
+                        <a href="https://wa.me/963944515413" target="_blank" rel="noreferrer" className={`${styles.btn} ${styles.btnOutline}`}>ابدأ مشروعك عبر واتساب</a>
                     </div>
                 </div>
             </div>

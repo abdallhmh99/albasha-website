@@ -111,7 +111,7 @@ function Navbar(){
                         alt=""
                     />
                 </span>
-                <p className={styles.name}>ALBASHA PLAST</p>
+                <p className={styles.name}>BASHA PLAST</p>
             </div>
         </div>
 
