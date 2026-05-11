@@ -1,4 +1,6 @@
+import { motion } from 'framer-motion';
 import SectionTitle from '../ui/SectionTitle';
+import AnimatedCounter from '../ui/AnimatedCounter';
 import styles from './ServicesPreview.module.css';
 
 const services = [
@@ -41,9 +43,9 @@ const services = [
 ];
 
 const stats = [
-    { value: "15+", label: "سنة من الخبرة" },
-    { value: "500+", label: "قالب تم إنجازه" },
-    { value: "100+", label: "عميل مستمر" },
+    { end: 15, suffix: "+", label: "سنة من الخبرة" },
+    { end: 500, suffix: "+", label: "قالب تم إنجازه" },
+    { end: 100, suffix: "+", label: "عميل مستمر" },
     { value: "24/7", label: "دعم فني وتصنيعي" },
 ];
 
@@ -57,9 +59,28 @@ export default function ServicesPreview() {
                     centered={true}
                 />
 
-                <div className={styles.servicesGrid}>
+                <motion.div 
+                    className={styles.servicesGrid}
+                    variants={{
+                        hidden: { opacity: 0 },
+                        visible: {
+                            opacity: 1,
+                            transition: { staggerChildren: 0.15 }
+                        }
+                    }}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-50px" }}
+                >
                     {services.map(service => (
-                        <div key={service.id} className={styles.imageCard}>
+                        <motion.div 
+                            key={service.id} 
+                            className={styles.imageCard}
+                            variants={{
+                                hidden: { opacity: 0, y: 30 },
+                                visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+                            }}
+                        >
                             {/* Background Image */}
                             <img src={service.image} alt={service.title} className={styles.cardImage} />
                             
@@ -74,16 +95,25 @@ export default function ServicesPreview() {
                                 <h3 className={styles.serviceTitle}>{service.title}</h3>
                                 <p className={styles.serviceDesc}>{service.description}</p>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
 
                 {/* Stats Section Integrated */}
                 <div className={styles.statsContainer}>
                     <div className={styles.statsGrid}>
                         {stats.map((stat, index) => (
                             <div key={index} className={styles.statItem}>
-                                <span className={styles.statValue} dir="ltr">{stat.value}</span>
+                                {stat.end !== undefined ? (
+                                    <AnimatedCounter 
+                                        end={stat.end} 
+                                        suffix={stat.suffix} 
+                                        className={styles.statValue} 
+                                        dir="ltr" 
+                                    />
+                                ) : (
+                                    <span className={styles.statValue} dir="ltr">{stat.value}</span>
+                                )}
                                 <span className={styles.statLabel}>{stat.label}</span>
                             </div>
                         ))}
