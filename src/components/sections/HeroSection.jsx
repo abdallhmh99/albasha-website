@@ -12,18 +12,18 @@ export default function HeroSection() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                    <span className={styles.badge}>رواد الصناعة في سوريا</span>
+                    <span className={styles.badge}>أكثر من 30 عاماً من الريادة الصناعية</span>
                     <h1 className={styles.title}>
-                        نحول أفكارك إلى<br />
-                        <span className={styles.highlight}>منتجات بلاستيكية</span><br />
-                        واقعية
+                        هندسة دقيقة. صناعة متينة.<br />
+                        <span className={styles.highlight}>نبتكر لنبني المستقبل</span><br />
+
                     </h1>
                     <p className={styles.description}>
-                        مصنع متكامل لإنتاج القوالب، خدمات CNC الاحترافية، وتصنيع أنابيب PPR بأعلى معايير الجودة العالمية.
+                        شريكك الصناعي الموثوق. من التصميم الهندسي للقوالب إلى التشغيل الميكانيكي المتقدم (CNC)، وإنتاج شبكات PPR الاستراتيجية. نجمع بين الإرث الصناعي والتكنولوجيا الحديثة لتقديم حلول لا تُضاهى.
                     </p>
                     <div className={styles.btnGroup}>
-                        <Button variant="primary" size="lg" to="/contact">تواصل معنا الآن</Button>
-                        <Button variant="outline" size="lg" to="/products">كتالوج المنتجات</Button>
+                        <Button variant="primary" size="lg" to="/contact">ابدأ مشروعك معنا</Button>
+                        <Button variant="outline" size="lg" to="/products">استكشف قدراتنا التصنيعية</Button>
                     </div>
                 </motion.div>
 
@@ -34,23 +34,31 @@ export default function HeroSection() {
                     transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                 >
                     <div className={styles.imageBox}>
-                        <div className={styles.placeholderImage}></div>
-
-                        {/* Floating glassmorphism badge */}
-                        <motion.div
-                            className={styles.floatingBadge}
-                            animate={{ y: [0, -15, 0] }}
-                            transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-                        >
-                            <div className={styles.badgeContent}>
-                                <div className={styles.pulseDot}></div>
-                                <div>
-                                    <span className={styles.badgeTitle}>آلة CNC قيد التشغيل</span>
-                                    <span className={styles.badgeSubtitle}>دقة عالية: 0.001mm</span>
-                                </div>
-                            </div>
-                        </motion.div>
+                        <video
+                            className={styles.placeholderImage}
+                            src="/videos/cnc_running.mp4"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            style={{ objectFit: 'cover', width: '100%', height: '100%', border: 'none' }}
+                        />
                     </div>
+
+                    {/* Floating glassmorphism badge — outside imageBox to avoid clipping */}
+                    <motion.div
+                        className={styles.floatingBadge}
+                        animate={{ y: [0, -15, 0] }}
+                        transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+                    >
+                        <div className={styles.badgeContent}>
+                            <div className={styles.pulseDot}></div>
+                            <div>
+                                <span className={styles.badgeTitle}>آلة CNC قيد التشغيل</span>
+                                <span className={styles.badgeSubtitle}>دقة عالية: 0.001mm</span>
+                            </div>
+                        </div>
+                    </motion.div>
                 </motion.div>
             </div>
         </section>

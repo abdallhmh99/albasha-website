@@ -10,37 +10,74 @@
     padding: 0 2rem;
 }
 
-.filtersWrapper {
+/* Filters System */
+.mainFiltersWrapper {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 1rem;
-    margin-bottom: 4rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
 }
 
-.filterBtn {
-    padding: 0.75rem 1.5rem;
-    border-radius: 999px;
-    border: 1px solid #cbd5e1;
-    background-color: transparent;
-    color: #475569;
-    font-size: 1rem;
-    font-weight: 600;
+.mainFilterBtn {
+    padding: 0.85rem 3rem;
+    border-radius: 12px;
+    border: 2px solid #e2e8f0;
+    background-color: #f8fafc;
+    color: #334155;
+    font-size: 1.15rem;
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: inherit;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
 }
 
-.filterBtn:hover {
-    border-color: #1d4ed8;
-    color: #1d4ed8;
+.mainFilterBtn:hover {
+    border-color: #cbd5e1;
+    background-color: #f1f5f9;
 }
 
-.filterBtn.active {
-    background-color: #1d4ed8;
-    border-color: #1d4ed8;
+.mainFilterBtn.activeMain {
+    background-color: #1e293b;
+    border-color: #1e293b;
     color: #ffffff;
-    box-shadow: 0 4px 14px rgba(29, 78, 216, 0.25);
+    box-shadow: 0 6px 16px rgba(30, 41, 59, 0.2);
+    transform: translateY(-2px);
+}
+
+.subFiltersWrapper {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 3.5rem;
+    flex-wrap: wrap;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.subFilterBtn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    border: 1px solid #cbd5e1;
+    background-color: transparent;
+    color: #64748b;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.subFilterBtn:hover {
+    border-color: #3b82f6;
+    color: #3b82f6;
+}
+
+.subFilterBtn.activeSub {
+    background-color: #eff6ff;
+    border-color: #3b82f6;
+    color: #2563eb;
 }
 
 .splitLayout {

@@ -16,7 +16,7 @@ export default function ContactSection() {
                                 </div>
                                 <div className={styles.infoContent}>
                                     <h3>المبيعات والدعم الفني</h3>
-                                    <p dir="ltr">+963 944 515 413</p>
+                                    <a href="tel:+963944515413" dir="ltr">+963 944 515 413</a>
                                 </div>
                             </div>
 
@@ -26,7 +26,7 @@ export default function ContactSection() {
                                 </div>
                                 <div className={styles.infoContent}>
                                     <h3>المقر الرئيسي</h3>
-                                    <p>أشرفية صحنايا، سوريا</p>
+                                    <a href="https://maps.google.com/?q=C7M6+V82+أشرفية+صحنايا+سوريا" target="_blank" rel="noreferrer">أشرفية صحنايا، سوريا</a>
                                 </div>
                             </div>
                         </div>

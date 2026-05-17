@@ -10,13 +10,13 @@ export default function CTASection() {
 
             <div className={styles.container}>
                 <div className={styles.content}>
-                    <h2 className={styles.title}>هل أنت مستعد لتحويل فكرتك إلى واقع؟</h2>
+                    <h2 className={styles.title}>هل تبحث عن قوة تصنيعية ترتقي بمشروعك؟</h2>
                     <p className={styles.description}>
-                        فريقنا من المهندسين والخبراء جاهز لدراسة مشروعك وتقديم أفضل الحلول الصناعية من التصميم الدقيق وحتى الإنتاج الشامل.
+                        انتقل بإنتاجك إلى المستوى التالي مع ترسانة "الباشا بلاست" الصناعية. نضع خبرة 30 عاماً وأحدث التقنيات الهندسية تحت تصرفك.
                     </p>
                     <div className={styles.btnGroup}>
-                        <Link to="/contact" className={`${styles.btn} ${styles.btnSolid}`}>تواصل معنا الآن</Link>
-                        <a href="https://wa.me/963944515413" target="_blank" rel="noreferrer" className={`${styles.btn} ${styles.btnOutline}`}>ابدأ مشروعك عبر واتساب</a>
+                        <Link to="/contact" className={`${styles.btn} ${styles.btnSolid}`}>تحدث مع مهندسينا الآن</Link>
+                        <a href="https://wa.me/963944515413" target="_blank" rel="noreferrer" className={`${styles.btn} ${styles.btnOutline}`}>طلب استشارة عبر واتساب</a>
                     </div>
                 </div>
             </div>

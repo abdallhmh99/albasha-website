@@ -10,7 +10,7 @@ export default function AboutStory() {
         target: containerRef,
         offset: ["start end", "end start"]
     });
-    
+
     // Parallax effect: moves from -50px to 50px as it scrolls
     const y = useTransform(scrollYProgress, [0, 1], [-80, 80]);
 
@@ -19,31 +19,31 @@ export default function AboutStory() {
             <div className={styles.container}>
                 <div className={styles.grid}>
                     <div className={styles.textContent}>
-                        <SectionTitle 
-                            badge="قصتنا" 
-                            title="رواد صناعة القوالب في سوريا" 
-                            centered={false} 
+                        <SectionTitle
+                            badge="إرثنا الصناعي"
+                            title="ثلاثة عقود من صياغة التفاصيل وهندسة الصلابة"
+                            centered={false}
                         />
                         <p className={styles.paragraph}>
-                            بدأت مسيرتنا برؤية واضحة: تقديم حلول صناعية تضاهي الجودة العالمية في مجال تصميم وتصنيع القوالب المعدنية، وتشكيل المعادن (CNC)، وخطوط إنتاج البلاستيك المتقدمة.
+                            لم تكن البداية مجرد تأسيس مصنع، بل كانت إرساءً لمعايير جديدة في القطاع الصناعي السوري. منذ أكثر من ثلاثين عاماً، ارتبط اسم <strong>الباشا بلاست</strong> بالموثوقية العالية والدقة الهندسية المتناهية في تصميم وتصنيع القوالب، وأنظمة التشغيل الميكانيكي، وخطوط الإنتاج المتقدمة.
                         </p>
                         <p className={styles.paragraph}>
-                            على مدار سنوات من العمل الجاد، استطعنا في <strong>مصنع الباشا</strong> بناء ثقة واسعة مع عملائنا من خلال الالتزام بأدق التفاصيل، واستخدام أحدث التكنولوجيا في الآلات والمعدات. نحن نؤمن بأن نجاح منتجك النهائي وعمره الطويل يبدأ من جودة القالب الذي ننتجه لك.
+                            نحن لا نصنع قوالب فقط؛ بل نؤسس للبنية التحتية لنجاح مشاريع عملائنا. بفضل الترسانة التقنية الحديثة والخبرات الهندسية المتراكمة، نضمن تحويل أعقد المخططات الصناعية إلى واقع ملموس يتميز بالمتانة، الاستدامة، والأداء الفائق الذي لا يساوم على الجودة.
                         </p>
                         <div className={styles.statsRow}>
                             <div className={styles.statBox}>
-                                <AnimatedCounter end={15} suffix="+" className={styles.statNumber} />
-                                <span className={styles.statText}>سنة من الخبرة</span>
+                                <AnimatedCounter end={30} suffix="+" className={styles.statNumber} />
+                                <span className={styles.statText}>عاماً من التميز الصناعي</span>
                             </div>
                             <div className={styles.statBox}>
                                 <AnimatedCounter end={100} suffix="%" className={styles.statNumber} />
-                                <span className={styles.statText}>دقة في التصنيع</span>
+                                <span className={styles.statText}>التزام بمعايير الجودة</span>
                             </div>
                         </div>
                     </div>
                     <div className={styles.imageContent} ref={containerRef}>
                         <motion.div className={styles.imageWrapper} style={{ y }}>
-                            <img src="/images/services/cnc.png" alt="آلة CNC في المصنع" className={styles.image} />
+                            <img src="/images/portfolio/portfolio_injection_mold_4cav_v2.png" alt="آلة CNC في المصنع" className={styles.image} loading="lazy" />
                             <div className={styles.imageOverlay}></div>
                         </motion.div>
                     </div>

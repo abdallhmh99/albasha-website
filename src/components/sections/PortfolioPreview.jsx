@@ -5,23 +5,23 @@ import styles from './PortfolioPreview.module.css';
 const projects = [
     {
         id: 1,
-        title: "قالب حقن لقطع غيار السيارات",
-        category: "قوالب حقن عالية الدقة",
-        image: "/images/services/mold.png",
+        title: "هندسة قوالب صناعية معقدة",
+        category: "قوالب حقن عالية التحمل",
+        image: "/images/portfolio/portfolio_injection_mold_4cav_v2.png",
         size: "large"
     },
     {
         id: 2,
-        title: "مجموعة وصلات مياه ضغط عالي",
-        category: "أنابيب ووصلات PPR",
-        image: "/images/services/ppr.png",
+        title: "خطوط إنتاج أنظمة PPR",
+        category: "بنية تحتية مائية موثوقة",
+        image: "/images/pipes/green_ppr_pn10.png",
         size: "medium"
     },
     {
         id: 3,
-        title: "قطعة ميكانيكية معقدة",
-        category: "تشغيل معادن CNC",
-        image: "/images/services/cnc.png",
+        title: "أجزاء ميكانيكية دقيقة التنفيذ",
+        category: "التشغيل الميكانيكي الدقيق (CNC)",
+        image: "/images/portfolio/cnc_aluminum_v3.png",
         size: "medium"
     }
 ];
@@ -32,8 +32,8 @@ export default function PortfolioPreview() {
             <div className={styles.container}>
                 <div className={styles.header}>
                     <SectionTitle 
-                        badge="معرض الأعمال"
-                        title="أحدث مشاريعنا وإنجازاتنا"
+                        badge="سجل الإنجازات"
+                        title="نماذج من دقة التصنيع الهندسي لدينا"
                         centered={false}
                     />
                     <div className={styles.ctaWrapper}>
@@ -47,7 +47,7 @@ export default function PortfolioPreview() {
                             key={project.id} 
                             className={`${styles.galleryItem} ${project.size === 'large' ? styles.largeItem : styles.mediumItem}`}
                         >
-                            <img src={project.image} alt={project.title} className={styles.projectImage} />
+                            <img src={project.image} alt={project.title} className={styles.projectImage} loading="lazy" />
                             <div className={styles.overlay}>
                                 <div className={styles.overlayContent}>
                                     <span className={styles.category}>{project.category}</span>

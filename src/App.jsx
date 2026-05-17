@@ -1,11 +1,14 @@
+import { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from './components/layout/Layout';
-import Home from './pages/Home';
-import Products from './pages/Products';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Services from './pages/Services';
-import Portfolio from './pages/Portfolio';
+import Loader from './components/ui/Loader';
+
+const Home = lazy(() => import('./pages/Home'));
+const Products = lazy(() => import('./pages/Products'));
+const About = lazy(() => import('./pages/About'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Services = lazy(() => import('./pages/Services'));
+const Portfolio = lazy(() => import('./pages/Portfolio'));
 
  const router = createBrowserRouter([{
     path: '/',
@@ -41,7 +44,9 @@ import Portfolio from './pages/Portfolio';
 export default function App() {
     return (
         <div className="app">
-            <RouterProvider router={router} />
+            <Suspense fallback={<Loader fullScreen />}>
+                <RouterProvider router={router} />
+            </Suspense>
         </div>
     );
 }

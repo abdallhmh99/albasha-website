@@ -157,7 +157,7 @@ function Navbar(){
             </span>
         </div>
 
-        <div className={styles.buttonContainer}>
+        <div className={styles.buttonContainer} style={{ display: 'none' }}>
             <button
                 className={styles.langButton}
                 onClick={handleLanguageToggle}
@@ -199,7 +199,7 @@ function Navbar(){
 
         
         <div className={`${styles.drawerMobileMenu} ${isMobileMenuOpen ? styles.drawerMobileMenuOpen : ''}`} id='mobile-menu'>
-            <div className={styles.mobileDrawerTop}>
+            <div className={styles.mobileDrawerTop} style={{ display: 'none' }}>
                 <button
                     className={styles.mobileLangButton}
                     onClick={handleLanguageToggle}
