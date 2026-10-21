@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" fill="none">
+  <!-- Helmet dome -->
+  <path d="M32 400C32 276.3 132.3 176 256 176C379.7 176 480 276.3 480 400H32Z" fill="#F1DE61"/>
+
+  <!-- Thin bright strip above brim -->
+  <rect x="31" y="378" width="450" height="18" fill="#FFD400"/>
+
+  <!-- Center ridge -->
+  <path d="M200 138C200 128.1 208.1 120 218 120H294C303.9 120 312 128.1 312 138V288C312 315.6 287 338 256 338C225 338 200 315.6 200 288V138Z" fill="#FFA000"/>
+  <ellipse cx="256" cy="308" rx="44" ry="29" fill="#F08E00"/>
+
+  <!-- Side ridges -->
+  <path d="M134 175L150 311" stroke="#FFA000" stroke-width="30" stroke-linecap="round"/>
+  <path d="M378 175L362 311" stroke="#FFA000" stroke-width="30" stroke-linecap="round"/>
+  <circle cx="150" cy="311" r="16" fill="#F08E00"/>
+  <circle cx="362" cy="311" r="16" fill="#F08E00"/>
+
+  <!-- Brim -->
+  <rect x="0" y="396" width="512" height="50" rx="25" fill="#F08F00"/>
+  <rect x="0" y="390" width="512" height="42" rx="21" fill="#FFA300"/>
+</svg>
